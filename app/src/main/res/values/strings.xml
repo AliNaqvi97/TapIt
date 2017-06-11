@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Tap It!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="play_button">Play</string>
+    <string name="title_activity_game">Tap It!</string>
+    <string name="objective_text">Objective:</string>
+    <string name="instructions">Tap the button as much as you can before time runs out</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_the_finger">Tap It!</string>
+    <string name="title_high_score">High Scores</string>
+    <string name="position">1st\n2nd\n3rd\n4th\n5th\n6th\n7th\n8th\n9th\n10th</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="play_again">Play Game</string>
+    <string name="sub_time">-5 Seconds!</string>
+    <string name="add_time">+5 Seconds!</string>
+    <string name="sub_score">-5 Score!</string>
+    <string name="add_score">+5 Score!</string>
+    <string name="pause">Game Paused</string>
+    <string name="resume">Resume</string>
+    <string name="restart">Restart</string>
+    <string name="quit">Quit</string>
+    <string name="back">Back</string>
+    <string name="power_up_down">Power-Ups/Downs:</string>
+    <string name="random">\????</string>
+    <string name="add_5_inst">Adds 5 points to the score</string>
+    <string name="sub_5_inst">Subtracts 5 points from the score</string>
+    <string name="add_5s_inst">Adds 5 seconds to the time</string>
+    <string name="sub_5s_inst">Subtracts 5 seconds from the time</string>
+    <string name="random_inst">It can be any of the above</string>
+</resources>

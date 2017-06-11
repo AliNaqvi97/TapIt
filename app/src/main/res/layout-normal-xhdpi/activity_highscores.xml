@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tapit="http://schemas.android.com/apk/res-auto"
+    android:background="#0db9ab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/list_score"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingRight="15dp"/>
+
+    <com.ahn.tapit.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_high_score"
+        android:layout_marginBottom="40dp"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/list_score"
+        tapit:fontName="atariFull.ttf"
+        android:textSize="32.5dp"
+        android:id="@+id/high_scores"/>
+    <com.ahn.tapit.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_below="@id/high_scores"
+        android:text="@string/position"
+        tapit:fontName="atariFull.ttf"
+        android:textSize="25dp"
+        android:textColor="#b90606"
+        android:lineSpacingExtra="10dp"
+        android:paddingLeft="15dp"/>
+    <com.ahn.tapit.MyButton
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:text="@string/main_menu"
+        android:textSize="16dp"
+        android:background="@drawable/button_animation2"
+        android:layout_below="@id/list_score"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/main_menu"
+        />
+    <com.ahn.tapit.MyButton
+        android:layout_width="175dp"
+        android:layout_height="55dp"
+        android:text="@string/play_again"
+        android:layout_alignParentRight="true"
+        android:textSize="16dp"
+        android:background="@drawable/button_animation2"
+        android:id="@+id/play_game"
+        android:layout_below="@id/list_score"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>
