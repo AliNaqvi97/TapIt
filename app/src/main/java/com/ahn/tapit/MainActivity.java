@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         buttonInstructions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Instructions.class));
+                startActivity(new Intent(MainActivity.this, InstructionsActivity.class));
             }
         });
         buttonHighScores.setOnClickListener(new View.OnClickListener() {
