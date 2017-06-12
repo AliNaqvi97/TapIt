@@ -8,59 +8,45 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.button_play) Button buttonPlay;
+    @BindView(R.id.button_instructions) Button buttonInstructions;
+    @BindView(R.id.button_high_scores) Button buttonHighScores;
 
-
-    private View.OnClickListener listener;
-    private Button bPlay, bInstructions, bHighScores;
-    private ArrayList<Integer> scores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        bPlay = (Button) findViewById(R.id.play);
-        bInstructions = (Button) findViewById(R.id.instructions);
-        bHighScores = (Button) findViewById(R.id.button_high_scores);
-        final DatabaseHandler db = new DatabaseHandler(this);
-
-        listener = new View.OnClickListener(){
+        ButterKnife.bind(this);
+        buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                if(v.getId()==R.id.play) {
-                    Intent g = new Intent(getApplicationContext(), Game.class);
-                    startActivity(g);
-                    finish();
-                }
-                if(v.getId()==R.id.instructions){
-                    Intent g = new Intent(getApplicationContext(), Instructions.class);
-                    startActivity(g);
-                    finish();
-                }
-                if(v.getId()==R.id.button_high_scores){
-                    Intent g = new Intent(getApplicationContext(), Highscores.class);
-                    scores = db.getAllScores();
-                    int x = 0;
-                    if(scores.size()<10) {
-                        while(x <10-scores.size()){
-                            scores.add(null);
-                        }
-                    }
-                    g.putIntegerArrayListExtra("data", scores);
-                    startActivity(g);
-                    finish();
-                }
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Game.class));
             }
-        };
-        bPlay.setOnClickListener(listener);
-        bInstructions.setOnClickListener(listener);
-        bHighScores.setOnClickListener(listener);
-
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        finish();
+        });
+        buttonInstructions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Instructions.class));
+            }
+        });
+        buttonHighScores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Highscores.class);
+                ArrayList<Integer> scores = new DatabaseHandler(MainActivity.this).getAllScores();
+                int x = 0;
+                if (scores.size() < 10) {
+                    while (x < 10 - scores.size()) {
+                        scores.add(null);
+                    }
+                }
+                intent.putIntegerArrayListExtra("data", scores);
+                startActivity(intent);
+            }
+        });
     }
 }
