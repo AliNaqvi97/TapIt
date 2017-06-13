@@ -14,11 +14,11 @@ import butterknife.ButterKnife;
 
 public class HighScoresActivity extends AppCompatActivity {
     @BindView(R.id.button_main_menu)
-    private Button buttonMainMenu;
+    Button buttonMainMenu;
     @BindView(R.id.button_play_again)
-    private Button buttonPlayAgain;
+    Button buttonPlayAgain;
     @BindView(R.id.score_listview)
-    private ListView scoreListView;
+    ListView scoreListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,13 +3,10 @@ package com.ahn.tapit;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
-/**
- * Created by Ali on 10/19/2015.
- */
-public class MyTextView extends TextView {
+public class MyTextView extends AppCompatTextView {
 
     public MyTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
@@ -26,12 +23,13 @@ public class MyTextView extends TextView {
         super(context);
         init(null);
     }
+
     private void init(AttributeSet attrs) {
-        if (attrs!=null) {
+        if (attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MyTextView);
             String fontName = a.getString(R.styleable.MyTextView_fontName);
-            if (fontName!=null) {
-                Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/"+fontName);
+            if (fontName != null) {
+                Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
                 setTypeface(myTypeface);
             }
             a.recycle();

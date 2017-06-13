@@ -13,15 +13,17 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class PauseDialog extends DialogFragment {
-    @BindView(R.id.resume_button)
-    private Button resumeButton;
-    @BindView(R.id.restart_button)
-    private Button restartButton;
-    @BindView(R.id.highscore_button)
-    private Button highScoreButton;
-    @BindView(R.id.quit_button)
-    private Button quitButton;
     private Game gameObject;
+
+    @BindView(R.id.resume_button)
+    Button resumeButton;
+    @BindView(R.id.restart_button)
+    Button restartButton;
+    @BindView(R.id.highscore_button)
+    Button highScoreButton;
+    @BindView(R.id.quit_button)
+    Button quitButton;
+
 
     @Nullable
     @Override

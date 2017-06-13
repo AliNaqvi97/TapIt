@@ -2,13 +2,10 @@ package com.ahn.tapit;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
-import android.widget.Button;
 
-/**
- * Created by Ali on 11/12/2015.
- */
-public class MyButton extends Button {
+public class MyButton extends AppCompatButton {
 
     public MyButton(Context context) {
         super(context);
@@ -24,8 +21,9 @@ public class MyButton extends Button {
         super(context, attrs, defStyle);
         setFont();
     }
+
     private void setFont() {
-        Typeface normal = Typeface.createFromAsset(getContext().getAssets(),"fonts/atariFull.ttf");
+        Typeface normal = Typeface.createFromAsset(getContext().getAssets(), "fonts/atariFull.ttf");
         setTypeface(normal);
     }
 }
