@@ -66,7 +66,7 @@ public class PauseDialog extends DialogFragment {
         return view;
     }
 
-    public void setObject(Game object){
+    public void setObject(Game object) {
         gameObject = object;
     }
 }
