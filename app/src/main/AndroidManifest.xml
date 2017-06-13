@@ -22,21 +22,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TapIt"
-            android:label="@string/title_activity_the_finger"
-            android:screenOrientation="portrait"></activity>
+
         <activity
             android:name=".Game"
             android:label="@string/title_activity_game"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".InstructionsActivity"
             android:label="@string/title_activity_instructions"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Highscores"
-            android:screenOrientation="portrait"></activity>
+            android:name=".HighScoresActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
