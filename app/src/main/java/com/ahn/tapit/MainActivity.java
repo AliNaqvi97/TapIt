@@ -11,11 +11,11 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button_play)
-    Button buttonPlay;
+    private Button buttonPlay;
     @BindView(R.id.button_instructions)
-    Button buttonInstructions;
+    private Button buttonInstructions;
     @BindView(R.id.button_high_scores)
-    Button buttonHighScores;
+    private Button buttonHighScores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
