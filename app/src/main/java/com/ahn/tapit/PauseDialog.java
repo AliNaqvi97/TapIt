@@ -12,7 +12,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MyDialog extends DialogFragment {
+public class PauseDialog extends DialogFragment {
     @BindView(R.id.resume_button)
     private Button resumeButton;
     @BindView(R.id.restart_button)
