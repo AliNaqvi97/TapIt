@@ -35,7 +35,7 @@ public class HighScoresActivity extends AppCompatActivity {
         }
 
         ListViewAdapter adapter = new ListViewAdapter(HighScoresActivity.this,
-                R.layout.score_list, scores);
+                R.layout.score_list, R.id.score_text, scores);
         scoreListView.setAdapter(adapter);
 
         buttonMainMenu.setOnClickListener(new View.OnClickListener() {
