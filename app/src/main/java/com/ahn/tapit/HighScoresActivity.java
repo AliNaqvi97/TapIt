@@ -47,7 +47,7 @@ public class HighScoresActivity extends AppCompatActivity {
         buttonPlayAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HighScoresActivity.this, Game.class);
+                Intent intent = new Intent(HighScoresActivity.this, GameActivity.class);
                 startActivity(intent);
                 finish();
             }

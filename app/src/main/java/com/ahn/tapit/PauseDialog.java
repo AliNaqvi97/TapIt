@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class PauseDialog extends DialogFragment {
-    private Game gameObject;
+    private GameActivity gameObject;
 
     @BindView(R.id.resume_button)
     Button resumeButton;
@@ -68,7 +68,7 @@ public class PauseDialog extends DialogFragment {
         return view;
     }
 
-    public void setObject(Game object) {
+    public void setObject(GameActivity object) {
         gameObject = object;
     }
 }
