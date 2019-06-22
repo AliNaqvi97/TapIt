@@ -3,15 +3,9 @@
     <corners
         android:radius="500dp"
         />
-    <gradient
-        android:angle="225"
-        android:centerX="35%"
-        android:centerColor="#3bb12e"
-        android:startColor="#11cf00"
-        android:endColor="#118e03"
-        android:type="linear"
+    <solid
+        android:color="@color/colorAccentDark"
         />
-
     <size
         android:width="150dp"
         android:height="150dp"

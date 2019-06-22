@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tapit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ahn.tapit.GameActivity">
+
+    <com.ahn.tapit.MyTextView
+        android:id="@+id/time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteTextColor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:text="0:59"
+        tapit:fontName="atariFull.ttf" />
+
+    <com.ahn.tapit.MyButton
+        android:id="@+id/tap_button"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_animation"
+        android:onClick="scoreOnClick"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="@string/title_activity_the_finger"
+        android:textAllCaps="false"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="17.5dp" />
+
+    <com.ahn.tapit.MyTextView
+        android:id="@+id/score_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tap_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="50dp"
+        tapit:fontName="atariFull.ttf"
+        tools:text="100"/>
+
+    <com.ahn.tapit.MyButton
+        android:id="@+id/add_score"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_animation2"
+        android:onClick="addScoreOnClick"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <ImageButton
+        android:id="@+id/pause"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/pause_icon"
+        android:onClick="pauseOnClick"
+        tools:ignore="ContentDescription" />
+
+    <com.ahn.tapit.MyTextView
+        android:id="@+id/score_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tap_button"
+        android:layout_alignEnd="@id/score_textview"
+        android:layout_marginBottom="30dp"
+        android:textSize="40sp"
+        tapit:fontName="atariFull.ttf"
+        tools:text="+5"/>
+
+    <com.ahn.tapit.MyTextView
+        android:id="@+id/time_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/time_textview"
+        android:layout_alignRight="@id/time_textview"
+        android:layout_below="@id/time_textview"
+        android:paddingTop="5dp"
+        tools:text="+5"
+        android:textSize="20dp"
+        tapit:fontName="atariFull.ttf" />
+</RelativeLayout>

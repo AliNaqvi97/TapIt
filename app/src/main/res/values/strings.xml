@@ -29,4 +29,6 @@
     <string name="add_5s_inst">Adds 5 seconds to the time</string>
     <string name="sub_5s_inst">Subtracts 5 seconds from the time</string>
     <string name="random_inst">It can be any of the above</string>
+    <string name="score">%d</string>
+    <string name="button_text">%s</string>
 </resources>

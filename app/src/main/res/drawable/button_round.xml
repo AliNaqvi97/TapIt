@@ -3,13 +3,8 @@
     <corners
         android:radius="500dp"
         />
-    <gradient
-        android:angle="225"
-        android:centerX="35%"
-        android:centerColor="#C90202"
-        android:startColor="#FF0000"
-        android:endColor="#B00505"
-        android:type="linear"
+    <solid
+        android:color="@color/buttonColorPrimary"
         />
     <size
         android:width="150dp"

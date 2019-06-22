@@ -1,53 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tapit="http://schemas.android.com/apk/res-auto"
-    android:background="#0db9ab"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <com.ahn.tapit.MyTextView
+        android:id="@+id/tap_it"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_activity_the_finger"
-        tapit:fontName="atariFull.ttf"
-        android:textSize="50dp"
-        android:textColor="#FFFFFF"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:id="@+id/tap_it"
-        />
+        android:text="@string/title_activity_the_finger"
+        android:textColor="@color/whiteTextColor"
+        android:textSize="52.5dp"
+        tapit:fontName="atariFull.ttf" />
 
     <com.ahn.tapit.MyButton
-        android:layout_width="265dp"
+        android:id="@+id/button_instructions"
+        android:layout_width="250dp"
         android:layout_height="60dp"
-        android:textSize="20dp"
-        android:background="@drawable/button_animation2"
-        android:id="@+id/instructions"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/button_animation2"
         android:text="@string/title_activity_instructions"
-        />
+        android:textSize="17.5dp" />
 
     <com.ahn.tapit.MyButton
-        android:layout_width="265dp"
+        android:id="@+id/button_play"
+        android:layout_width="250dp"
         android:layout_height="60dp"
-        android:background="@drawable/button_animation2"
-        android:layout_above="@id/instructions"
+        android:layout_above="@id/button_instructions"
         android:layout_centerHorizontal="true"
-        android:id="@+id/play"
-        android:textSize="20dp"
+        android:background="@drawable/button_animation2"
         android:text="@string/play_button"
-        />
+        android:textSize="17.5sp" />
 
     <com.ahn.tapit.MyButton
-        android:layout_width="265dp"
-        android:layout_height="60dp"
-        android:textSize="20dp"
-        android:layout_below="@id/instructions"
-        android:background="@drawable/button_animation2"
         android:id="@+id/button_high_scores"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/button_instructions"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:background="@drawable/button_animation2"
         android:text="@string/title_high_score"
-        />
+        android:textSize="17.5dp" />
 
 </RelativeLayout>
